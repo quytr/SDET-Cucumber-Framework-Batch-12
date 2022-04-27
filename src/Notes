@@ -1,0 +1,109 @@
+Gherkin language
+
+Scenario
+Given : Pre-condition -- > The start stage, pre-requisite we need to define it in Given
+When  : Actions we need to perform -- > Start the action/operation to perform
+And   : Supporting tag (can be used with Given, When, Then)
+Then  : Expected Results -- > to verify our task, we write the Acceptance Criteria under Then
+
+Class 2
+Recap -
+What is framework?
+    It is an organized structure of folders and packages with allows us write clean and maintainable code.
+
+build management tool:
+    maven
+
+pom.xml is the main configuration file in maven project.
+
+main -- it is used to write the code for development.
+test -- it is used to write the code to test the application.
+    -- java - for tech/coding we use Java directory.
+    -- resources - for non tech/ non code we use resources.
+
+Cucumber - it supports BDD (Behavior Driven Development
+         - we use Gherkin language (plain English text) to write the scenarios.
+         - it works with JUnit
+
+Scenario -- it is a test case
+Given -- pre condition
+When -- actions
+And -- supporting tag
+Then -- results
+
+US 12345 -- Employee search
+
+Scenario -- Search employee by ID
+Given user is navigated to HRMS Application
+When user enters valid admin credentials
+And clicks on login button
+And navigates to employee list page
+When user enters valid employee ID
+And clicks on search button
+Then user is able to see employee information
+
+Scenario -- Search employee by name
+Given user is navigated to HRMS Application
+When user enters valid admin credentials
+And clicks on login button
+And navigates to employee list page
+When user enters valid employee name
+And clicks on search button
+Then user is able to see employee information
+
+File when we write BDD scenarios is feature file.
+This file has .feature extension
+# write comment with # in .feature file
+
+Abstraction
+    Declaration -- method without body
+    Definition -- method with body
+
+STEP TO CREATE TEST CASE IN INTELLIJ:
+
+1. create a folder named 'features' inside test/resources
+2. create a folder named 'steps' inside test/java
+3. inside features folder create  file 'EmployeeSearch.features'
+4. inside .features file create the scenario by: Typing
+  4.1  Feature: US-12345 - Search an employee in HRMS
+         Scenario: Search an employee by id
+           Given user is navigated to the HRMS application
+           When user enters valid admin credentials
+           And user clicks on login button
+           And user is navigated to employee list page
+           When user enters valid employee id
+           And user clicks on search button
+           Then user is able to see employee information
+  4.2 save the file
+  4.3 Hover mouse over the line with Scenario keyword and run it
+  4.4 when results appear in console copy the generated method declarations
+5. create a java class named 'EmployeeSearchSteps.java'
+   5.1 paste the copied method declarations from console
+   5.2 import the classes required in tags with red color
+   5.3 MOVING to each steps' Java Method:
+      5.3.1 right-click on the step
+      5.3.2 choose 'go to'
+      5.3.3 click on 'Declaration or Usages'
+   ...  MORE COMING!!!
+
+
+Class 3
+Recap -
+We use feature file to write out scenarios
+-- search employee by ID
+-- search employee by name
+
+In feature file, we write scenarios using Gherkin language
+-- Given, when, and, then, scenario, feature
+
+After feature file, we need to create step definitions
+
+
+
+
+
+
+
+
+
+
