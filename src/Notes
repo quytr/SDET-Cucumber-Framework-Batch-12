@@ -24,6 +24,7 @@ test -- it is used to write the code to test the application.
 Cucumber - it supports BDD (Behavior Driven Development
          - we use Gherkin language (plain English text) to write the scenarios.
          - it works with JUnit
+         - Cucumber works on linking not on order
 
 Scenario -- it is a test case
 Given -- pre condition
@@ -97,6 +98,24 @@ In feature file, we write scenarios using Gherkin language
 -- Given, when, and, then, scenario, feature
 
 After feature file, we need to create step definitions
+
+
+Class 4
+Recap --
+    Common methods class in our framework is used to write all the methods, we will be using in majority of scenarios
+(Code usability)
+
+sendText method, click, etc
+
+In constants class, we provide implicit wait, explicit wait values and test data path.
+
+Page Object Model (POM) is design pattern.
+According to page object model, we create page classes for all the screens available in the application.
+
+
+
+
+
 
 
 

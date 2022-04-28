@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import pages.LoginPage;
 import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Constants;
@@ -21,45 +22,46 @@ public class EmployeeSearchSteps extends CommonMethods {
     }
     @When("user enters valid admin credentials")
     public void user_enters_valid_admin_credentials() {
-        WebElement usernameField = driver.findElement(By.id("txtUsername"));
+//        LoginPage login = new LoginPage();
+//        WebElement usernameField = driver.findElement(By.id("txtUsername"));
 //        usernameField.sendKeys(ConfigReader.getPropertyValue("username"));
-        sendText(usernameField, ConfigReader.getPropertyValue("username"));
+        sendText(login.usernameBox, ConfigReader.getPropertyValue("username"));
 
-        WebElement passwordField = driver.findElement(By.id("txtPassword"));
+//        WebElement passwordField = driver.findElement(By.id("txtPassword"));
 //        passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
-        sendText(passwordField, ConfigReader.getPropertyValue("password"));
+        sendText(login.passwordBox, ConfigReader.getPropertyValue("password"));
 
-        driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);
     }
     @When("clicks on login button")
     public void clicks_on_login_button() {
-        WebElement loginButton = driver.findElement(By.id("btnLogin"));
+//        LoginPage login = new LoginPage();
+//        WebElement loginButton = driver.findElement(By.id("btnLogin"));
 //        loginButton.click();
 //        driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);
-        click(loginButton);
+        click(login.loginBtn);
 
     }
     @When("navigates to employee list page")
     public void navigates_to_employee_list_page() {
-        WebElement pimOption = driver.findElement(By.id("menu_pim_viewPimModule"));
+//        WebElement pimOption = driver.findElement(By.id("menu_pim_viewPimModule"));
 //        pimOption.click();
-        click(pimOption);
+        click(employeeSearchPage.pimOption);
 
-        WebElement empListOption = driver.findElement(By.id("menu_pim_viewEmployeeList"));
+//        WebElement empListOption = driver.findElement(By.id("menu_pim_viewEmployeeList"));
 //        empListOption.click();
-        click(empListOption);
+        click(employeeSearchPage.empListOption);
     }
     @When("user enters valid employee ID")
     public void user_enters_valid_employee_id() {
-        WebElement searchID = driver.findElement(By.id("empsearch_id"));
+//        WebElement searchID = driver.findElement(By.id("empsearch_id"));
 //        searchID.sendKeys("8510142");
-        sendText(searchID, "8510142");
+        sendText(employeeSearchPage.idField, "8510142");
     }
     @When("clicks on search button")
     public void clicks_on_search_button() {
-        WebElement searchButton = driver.findElement(By.id("searchBtn"));
+//        WebElement searchButton = driver.findElement(By.id("searchBtn"));
 //        searchButton.click();
-        click(searchButton);
+        click(employeeSearchPage.searchButton);
 
     }
     @Then("user is able to see employee information")
@@ -71,9 +73,9 @@ public class EmployeeSearchSteps extends CommonMethods {
     @When("user enters valid employee name")
     public void user_enters_valid_employee_name() {
 //        driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);
-        WebElement searchName = driver.findElement(By.xpath("(//*[@type='text'])[1]"));
+//        WebElement searchName = driver.findElement(By.xpath("(//*[@type='text'])[1]"));
 //        nameSearch.sendKeys("Zubair");
-        sendText(searchName, "Deigo");
+        sendText(employeeSearchPage.nameField, "Deigo");
 
 
     }
