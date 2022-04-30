@@ -70,6 +70,10 @@ public class CommonMethods extends PageInitializers {
         driver.quit();
     }
 
+    public static void errorMsgText(WebElement element){
+        System.out.println(element.getText());
+    }
+
 
 
 

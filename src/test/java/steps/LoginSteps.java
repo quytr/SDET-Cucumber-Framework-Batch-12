@@ -47,6 +47,7 @@ public class LoginSteps extends CommonMethods {
     @Then("user sees error message on the screen")
     public void user_sees_error_message_on_the_screen() {
         // homework - verify the error message
+        errorMsgText(login.errorMessage);
         tearDown();
 
     }
