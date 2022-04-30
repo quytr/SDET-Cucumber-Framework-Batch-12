@@ -7,6 +7,7 @@ import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
 
+    // object repository
     @FindBy(id="txtUsername")
     public WebElement usernameBox;
 
@@ -19,7 +20,10 @@ public class LoginPage extends CommonMethods {
     @FindBy(xpath = "//span[@id='spanMessage']")
     public WebElement errorMessage;
 
+    // constructor
+    // using PageFactory to initialize the elements
     public LoginPage() {
+
         PageFactory.initElements(driver,this);
     }
 }

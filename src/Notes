@@ -113,6 +113,44 @@ Page Object Model (POM) is design pattern.
 According to page object model, we create page classes for all the screens available in the application.
 
 
+Class 5
+Recap --
+Creating multiple steps classes for multiple feature files.
+Page Object Model design pattern - separating the web pages as separate classes.
+In common methods, we are calling page initializers method, this method is going to call the objects of page classes
+which will call the constructor and these constructor will initialize all the Web Elements.
+
+Create runners package:
+    In runners package, create RunnerClass:
+
+1. features we use to provide the path of all the feature files.
+    features = "src/test/resources/features/",
+
+2. glue is where we find implementations for Gherkin steps, we provide the path of package to get all the step definitions.
+    glue = "steps",
+
+3. dryRun we use to get the step definitions of undefined steps. if we set it to true, it will quickly scan all Gherkin
+steps whether they are implemented or not. If we set it to true, it stops actual execution to execute scripts in real
+time, we should set this value to false.
+    dryRun = false,
+
+4. It means the console output for cucumber test is having irrelevant information. When we set it to true, it simply
+removes akk the irrelevant information.
+    monochrome = true,
+
+5. Use Tags @smoke, @sprint#,@test, @regression to identify test cases correctly for different testing methods.
+    - Tags will identify the scenario based on the tag we provide in the feature files.
+    - Use or if we need to execute scenarios from logical or keyword which will execute either of the scenario having
+    the tag.
+    - Use and if we need to execute scenarios from logical and keyword which will execute the scenarios having both the
+    tags in it.
+        tags = "@smoke and @sprint12"
+@smoke, which implements quick tests on the scenarios with this tag. (in Smoke class and the tag will not change)
+@regression, which implements complete test on the scenarios with this tag. (in Regression class and the tag will not change)
+@test, under development (every other tag can go to RunnerClass because this class is for testing with
+                            any tags that we can chang all the time)
+
+
 
 
 

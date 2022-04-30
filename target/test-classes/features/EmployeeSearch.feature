@@ -1,4 +1,6 @@
 Feature: US-12345 Search an employee in HRMS
+
+  @regression
   Scenario: Search an employee by ID
     * user is navigated to HRMS application
     * user enters valid admin credentials
@@ -8,6 +10,7 @@ Feature: US-12345 Search an employee in HRMS
     * clicks on search button
     * user is able to see employee information
 
+  @smoke
   Scenario: Search an employee by name
     Given user is navigated to HRMS application
     When user enters valid admin credentials

@@ -13,10 +13,10 @@ public class EmployeeSearchPage extends CommonMethods {
     @FindBy(id="menu_pim_viewEmployeeList")
     public WebElement empListOption;
 
-    @FindBy(id="(//*[@type='text'])[1]")
+    @FindBy(xpath="(//*[@type='text'])[1]")
     public WebElement nameField;
 
-    @FindBy(xpath="empsearch_id")
+    @FindBy(id="empsearch_id")
     public WebElement idField;
 
     @FindBy(id="searchBtn")

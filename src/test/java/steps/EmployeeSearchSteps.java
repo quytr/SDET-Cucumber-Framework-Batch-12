@@ -75,7 +75,7 @@ public class EmployeeSearchSteps extends CommonMethods {
 //        driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);
 //        WebElement searchName = driver.findElement(By.xpath("(//*[@type='text'])[1]"));
 //        nameSearch.sendKeys("Zubair");
-        sendText(employeeSearchPage.nameField, "Deigo");
+        sendText(employeeSearchPage.nameField, "zubair");
 
 
     }
