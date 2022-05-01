@@ -1,7 +1,7 @@
 Feature: Validation of Login scenarios
 
   Background:
-    Given user is navigated to HRMS application
+    #Given user is navigated to HRMS application
 
 
   @smoke @regression @batch12 @sprint12
@@ -18,7 +18,7 @@ Feature: Validation of Login scenarios
     And clicks on login button
     Then ESS user is successfully logged in
 
-  @regression @test @smoke
+  @regression @smoke
   Scenario: Invalid Login
     #Given user is navigated to HRMS application
     When user enters invalid username and password

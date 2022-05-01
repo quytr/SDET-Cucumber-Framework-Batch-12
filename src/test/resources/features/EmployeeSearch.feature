@@ -1,7 +1,7 @@
 Feature: US-12345 Search an employee in HRMS
 
   Background:
-    Given user is navigated to HRMS application
+    #Given user is navigated to HRMS application
     When user enters valid admin credentials
     And clicks on login button
     And navigates to employee list page
