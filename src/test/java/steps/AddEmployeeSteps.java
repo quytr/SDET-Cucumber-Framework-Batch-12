@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.EmployeeDetailPage;
 import utils.CommonMethods;
 
 import java.util.List;
@@ -52,25 +53,29 @@ public class AddEmployeeSteps extends CommonMethods {
     }
 
     @When("user provides multiple employees data and verify they are added")
-    public void user_provides_multiple_employees_data_and_verify_they_are_added(DataTable dataTable) throws InterruptedException {
+    public void user_provides_multiple_employees_data_and_verify_they_are_added(DataTable dataTable)  {
         List<Map<String, String>> employeeNames= dataTable.asMaps();
         for(Map<String, String> employee :employeeNames){
-            System.out.println(employee);
+//            System.out.println(employee);
 
             String firstNameValue = employee.get("firstName");
             String middleNameValue = employee.get("middleName");
             String lastNameValue = employee.get("lastName");
 
-            System.out.println(firstNameValue + " " + middleNameValue + " " + lastNameValue);
+//            System.out.println(firstNameValue + " " + middleNameValue + " " + lastNameValue);
 
             sendText(addEmployeePage.firstNameField, firstNameValue);
             sendText(addEmployeePage.middleNameField, middleNameValue);
             sendText(addEmployeePage.lastNameField, lastNameValue);
 
             click(addEmployeePage.saveButton);
-            Thread.sleep(3000);
 
             //verification of adding an employee is HW
+            String fullName = firstNameValue + " " + middleNameValue + " " + lastNameValue;
+            if(employeeDetailPage.empFullName.getText().equals(fullName)){
+                System.out.println(fullName + " is added to employee list");
+            }
+
             click(employeeSearchPage.addEmployeeOption);
         }
     }
