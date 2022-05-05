@@ -1,0 +1,82 @@
+In feature, what we can see is Gherkin language that has:
+given - precondition
+when - action
+then - expected results
+and - continuation step
+but -
+
+background - common steps for precondition that we use in the particular feature file
+
+Feature: is a functionality we are testing
+    Scenario
+    Scenario Outline with Examples - use for Data Driven Testing that we can run more than one tests
+        Data Driven Testing - execute test case across multiple data set
+
+Step Definition:
+    Implementation code using Java and add verification/assertion using JUnit
+    Hooks: provide precondition and post condition to all scenarios. We always create hooks class in steps package.
+        @Before - precondition
+        @After - post condition
+
+Runner:
+    Using JUnit to run cucumber scenarios
+        Cucumber Options:
+        glue -
+        dryRun - where we find implementations step
+        monochrome - avoid irrelevant information
+        tags - for grouping reports - path to our feature we are running
+
+Maven: a build automation tool
+    - We can manage the dependencies
+    - pom file (pom.xml) - project object model to define our dependencies:
+        1. Cucumber (Java, JUnit)
+        2. Unit
+        3. Selenium
+        4. Apache poi etc...
+    - To find the dependencies we go to maven repository.
+    - Maven has 3 repositories:
+        1. central - https://www.mvnrepository.com/
+        2. remote - company repository (more security) they download from central repo and more security
+        3. local - .M2 directory that has all the jar files
+
+resources:
+    - config -
+    - features -
+    - test data -
+
+
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#“”" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#“”
+
+(Comments)
+#Sample Feature Definition Template
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

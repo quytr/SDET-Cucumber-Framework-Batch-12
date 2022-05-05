@@ -176,6 +176,27 @@ Background vs Hooks:
 ****Our framework is Hybrid Framework that supports BDD and DDT*****
 
 
+Class 7
+Recap --
+
+Hooks -
+    To write pre conditions and post conditions of the project, we use hooks.
+    @Before and @After - 2 types of hooks we have in cucumber.
+    We always write hooks under steps package.
+
+Data Driver Testing part -
+    - Using examples table and scenarios outline.
+    - Using Data Table.
+    - Excel - larger data
+
+
+Assertions: from JUnit -- 2 types:
+        1. Comparison
+        2. Existence
+
+
+
+
 
 
 
