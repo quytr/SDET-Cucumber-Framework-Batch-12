@@ -49,15 +49,35 @@ public class LoginSteps extends CommonMethods {
     public void user_sees_error_message_on_the_screen() {
         // homework - verify the error message
         errorMsgText(login.errorMessage);
-//        tearDown();
+        Assert.assertTrue(login.errorMessage.isDisplayed());
 
+//        tearDown();
     }
 
 
+    @When("user enters valid password and empty username")
+    public void user_enters_valid_password_and_empty_username() {
 
+        sendText(login.passwordBox, "Hum@nhrm123");
+    }
 
+    @When("user enters valid username and empty password")
+    public void user_enters_valid_username_and_empty_password() {
 
+        sendText(login.usernameBox, "admin");
+    }
 
+    @When("user enters valid password and invalid username")
+    public void user_enters_valid_password_and_invalid_username() {
+        sendText(login.usernameBox, "abde");
+        sendText(login.passwordBox, "Hum@nhrm123");
+    }
+
+    @When("user enters valid username and invalid password")
+    public void user_enters_valid_username_and_invalid_password() {
+        sendText(login.usernameBox, "admin");
+        sendText(login.passwordBox, "Hum123455");
+    }
 
 
 }

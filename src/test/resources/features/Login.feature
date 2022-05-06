@@ -24,3 +24,27 @@ Feature: Validation of Login scenarios
     When user enters invalid username and password
     And clicks on login button
     Then user sees error message on the screen
+
+  @hw
+  Scenario: Login with empty username
+    When user enters valid password and empty username
+    And clicks on login button
+    Then user sees error message on the screen
+
+  @hw
+  Scenario: Login with empty password
+    When user enters valid username and empty password
+    And clicks on login button
+    Then user sees error message on the screen
+
+  @hw
+  Scenario: Login with invalid username
+    When user enters valid password and invalid username
+    And clicks on login button
+    Then user sees error message on the screen
+
+  @hw
+  Scenario: Login with invalid password
+    When user enters valid username and invalid password
+    And clicks on login button
+    Then user sees error message on the screen
