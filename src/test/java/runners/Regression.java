@@ -21,7 +21,9 @@ import org.junit.runner.RunWith;
         // when we set it to true, it simply removes akk the irrelevant information
         monochrome = true,
 
-        tags = "@regression"
+        tags = "@regression",
+
+        plugin = {"html:target/cucumber.html", "pretty", "json:target/cucumber.json", "rerun:target/failed.txt"}
 
 )
 

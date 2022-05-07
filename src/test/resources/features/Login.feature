@@ -4,14 +4,14 @@ Feature: Validation of Login scenarios
     #Given user is navigated to HRMS application
 
 
-  @smoke @regression @batch12 @sprint12
+  @smoke @regression @batch12 @sprint12 @latest
   Scenario: Admin Login
     #Given user is navigated to HRMS application
     When user enters valid admin credentials
     And clicks on login button
     Then admin user is successfully logged in
 
-  @regression @smoke
+  @regression @smoke @sprint12
   Scenario: ESS Login
     #Given user is navigated to HRMS application
     When user enters valid ESS username and password

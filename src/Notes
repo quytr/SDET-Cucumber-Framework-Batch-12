@@ -202,6 +202,17 @@ Maven surefire plugin
 
 json: java script object notation
 
+From cmd/terminal
+1. To clean the project - mvn clean
+2. To run the project - mnv test
+3. Override the tags from cmd - mvn clean verify -Dcucumber.filter.tags="@latest"
+
+mvn clean - it cleans your target folder
+mvn test - to execute our test cases
+verify - verify your code
+package - convert your code to packages
+
+
 
 
 
