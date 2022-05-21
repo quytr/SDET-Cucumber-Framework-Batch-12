@@ -15,11 +15,11 @@ import java.util.concurrent.TimeUnit;
 
 public class EmployeeSearchSteps extends CommonMethods {
 
-    @Given("user is navigated to HRMS application")
-    public void user_is_navigated_to_hrms_application() {
-        openBrowserAndLaunchApplication();
-
-    }
+//    @Given("user is navigated to HRMS application")
+//    public void user_is_navigated_to_hrms_application() {
+//        openBrowserAndLaunchApplication();
+//
+//    }
     @When("user enters valid admin credentials")
     public void user_enters_valid_admin_credentials() {
 //        LoginPage login = new LoginPage();
