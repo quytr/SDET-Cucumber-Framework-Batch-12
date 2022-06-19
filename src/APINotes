@@ -33,6 +33,47 @@ given - prepare the request
 when - making a call
 then - verification/assertion
 
+***************************************************************************
+Class 03:
+Recap:
+POST -
+Base URL = Base URI
+end point
+Headers
+body
+
+then -
+
+-jsonPath()
+
+-to retrieve employee from the database
+
+GET -
+query parameter
+token
+
+@Test - junit annotation we use to execute our test cases.
+@FixMethodOrder() we use to change the flow of execution (Name.Ascending - alphabetical order)
+
+To update the details of the employee
+PUT -
+body
+header
+token
+end point
+
+200 vs 201
+
+Token should get generated automatically.
+
+********************************************************************************
+Class04:
+API payload contants - the body we need to create, update employee record, we can pass it from api payload constants class
+
+
+
+
+
 
 
 
